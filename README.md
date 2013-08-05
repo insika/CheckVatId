@@ -12,16 +12,20 @@ http://ec.europa.eu/taxation_customs/vies/vatRequest.html
 
 ### Preparation ###
 
-To get started, make shure Java has been installed correctly on your plaform. 
+To get started, make sure Java has been installed correctly on your plaform. 
 Open a terminal and type:
+
     java -version
+
 You should see something like:
+
     java version "1.7.0_25" 
     ...
+
 Otherwise install a Java Runtime Environment (JRE) on your platform.
 
-Change to your workspace directory. Download the ZIP achive or clone this 
-repository: 
+Change to your workspace directory. Download the ZIP achive or clone this repository: 
+
     git clone http://github.com/insika/CheckVatId
 
 Open the project using NetBeans IDE or the IDE of your choice. 
@@ -33,12 +37,15 @@ Build the project.
 Change to the `/dist` subdirectory `cd CheckVatId/dist` .
 
 In environments with direct connection to the internet type:
+
     java -jar CheckVatId.jar <countryCode> <vatNumber>
 
 ..and replace <countryCode> and <vatNumber> by the strings to be checked, e.g.:
+
     java -jar CheckVatId.jar "DE" "811240952" 
 
 If you are behind an enterprise proxy, you have to specify it by:
+
     java -Dhttp.proxyHost="proxy" -Dhttp.proxyPort="8080" -jar CheckVatId.jar "DE" "811240952"
 
 
